@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "name": "bot-discord",
+  "version": "1.0.0",
+  "description": "Discord bot to announce news youtube videos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matheus Louzada",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "googleapis": "^140.0.1",
+    "node-cron": "^3.0.3"
+  }
+}
