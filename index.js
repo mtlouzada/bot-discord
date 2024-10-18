@@ -62,3 +62,39 @@ async function checkNewVideos(){
         console.log(error)
     }
 }
+
+var ignorePostsFrom = utils.loadAccountsFromFile('ignore_posts.db');
+// Function to load accounts from a file into an array
+function loadAccountsFromFile(fileName) {
+  try {
+    // Read file contents
+    const fileContent = fs.readFileSync(path.join(__dirname, 'pbdb/'+fileName), 'utf-8');
+    // Split by newline and filter out any empty lines
+    const accountsArray = fileContent.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+    return accountsArray;
+  } catch (err) {
+    console.error(Error reading file ${fileName}:, err);
+    return [];
+  }
+}
+function saveAccountsToFile(accounts, filename){ 
+  try {
+    fs.writeFileSync(path.join(__dirname, 'pbdb/'+filename), accounts.join('\n'));
+    console.log(Saved ${filename}!)
+  } catch (error) {
+    console.error('Error saving :', error.message);
+  }
+}
+//
+  // ignore blacklist or ignore comments from list, like pixbee autocommenting
+  //
+  if ((theBlackList).includes(data.author) 
+      || (ignoreCommentsFrom).includes(data.author)) {
+    return;
+  }
+//
+  // ignore blacklist or ignore comments from list, like pixbee autocommenting
+  //
+  if ((ignoreCommentsFrom).includes(VIDEO_ID)) {
+    return;
+  }
