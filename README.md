@@ -31,3 +31,18 @@ Este é um bot para Discord que envia um alerta em um servidor especificado semp
     ```
     npm install
     ```
+
+### Crie um arquivo .env na raiz do projeto e adicione suas credenciais
+
+    ```
+    DISCORD_TOKEN=seu-token-do-discord
+    YOUTUBE_API_KEY=sua-chave-de-api-do-youtube
+    CHANNEL_ID=o-id-do-canal-youtube
+
+    ```
+
+### Inicie o bot
+
+    ```
+    node bot.js
+    ```
