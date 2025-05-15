@@ -1,3 +1,3 @@
-# 🤖 Bot Discord
+# Repo ♻️
 
-## I created this bot to remind me of the new skateboarding videos from thasher magazine 🛹🤌
+## Esse repo será reutilizado para um projeto c# .net
